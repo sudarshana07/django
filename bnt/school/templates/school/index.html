@@ -1,0 +1,19 @@
+{% extends 'school/base.html' %}
+
+{% block title %} index {% endblock %}
+
+{% block content %}
+    <center>
+        <div class="">
+        <form action="." method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <table class="table table-borderless">
+                  {{ form.as_table }}
+                </table>
+                <input type="submit" value="Submit" class="btn btn-outline-dark">
+            </div>
+        </form>
+        </div>
+    </center>
+{% endblock %}
